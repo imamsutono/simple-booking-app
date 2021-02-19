@@ -1,5 +1,6 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {Image} from 'react-native';
+import {StackActions} from '@react-navigation/native';
 import {
   Button,
   Container,
@@ -11,22 +12,40 @@ import {
 import images from 'res/images';
 import styles from './styles';
 
-const Login = () => (
-  <Container>
-    <Spacer size="xl" />
-    <Image source={images.gymPodder} style={styles.gymPodder} />
+const Login = ({navigation}) => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
 
-    <Title>Hi Gym Podder!</Title>
-    <Text align="center" color="gymPod">
-      Your Private Gym Awaits! #JustGetStarted
-    </Text>
-    <Spacer size="xl" />
+  const submitLogin = () => {
+    navigation.dispatch(StackActions.replace('Home', {username}));
+  };
 
-    <TextInput placeholder="Username" />
-    <TextInput placeholder="Password" secureTextEntry />
-    <Spacer />
-    <Button label="LOGIN" />
-  </Container>
-);
+  return (
+    <Container>
+      <Spacer size="xl" />
+      <Image source={images.gymPodder} style={styles.gymPodder} />
+
+      <Title>Hi Gym Podder!</Title>
+      <Text align="center" color="gymPod">
+        Your Private Gym Awaits! #JustGetStarted
+      </Text>
+      <Spacer size="xl" />
+
+      <TextInput
+        placeholder="Username"
+        value={username}
+        onChangeText={setUsername}
+      />
+      <TextInput
+        placeholder="Password"
+        value={password}
+        onChangeText={setPassword}
+        secureTextEntry
+      />
+      <Spacer />
+      <Button label="LOGIN" onPress={submitLogin} />
+    </Container>
+  );
+};
 
 export default Login;
