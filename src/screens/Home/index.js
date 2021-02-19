@@ -1,33 +1,29 @@
 import React from 'react';
-import {Image, Text, TouchableNativeFeedback, View} from 'react-native';
-import {Button, Container, Spacer} from 'lib/components';
-import images from 'res/images';
-import styles from './styles';
+import {Card, Container} from 'lib/components';
 
 const Home = () => (
   <Container>
-    <TouchableNativeFeedback onPress={() => {}}>
-      <View style={styles.container}>
-        <Image source={images.gymPod} style={styles.cover} />
-        <View style={styles.content}>
-          <Text style={styles.title}>The Dungeon</Text>
-          <Text style={styles.subtitle}>
-            80 Bendemeer Road, #01-10, Singapore, 339949{'\n'}4 minutes from
-            Boon Keng MRT{'\n'}7 minutes from Bendemeer MRT{'\n'}
-            Enter via the open carpark behind the main building{'\n'}
-            PER PAX (or pod) PER HOUR basis.
-          </Text>
+    <Card
+      buttonLabel="BOOK"
+      buttonOnPress={() => {}}
+      cover="gymPod"
+      footerTitle="$12.5"
+      title="The Dungeon"
+      subtitle={`80 Bendemeer Road, #01-10, Singapore, 339949
+4 minutes from Boon Keng MRT
+7 minutes from Bendemeer MRT
+Enter via the open carpark behind the main building
+PER PAX (or pod) PER HOUR basis.`}
+    />
 
-          <Spacer />
-          <View style={styles.row}>
-            <Text style={[styles.price]}>$9.5</Text>
-            <View style={styles.flex}>
-              <Button label="BOOK" />
-            </View>
-          </View>
-        </View>
-      </View>
-    </TouchableNativeFeedback>
+    <Card
+      buttonLabel="BOOK"
+      buttonOnPress={() => {}}
+      cover="gymPod"
+      footerTitle="$9.5"
+      title="Alexandra Technopark Blk A"
+      subtitle="438A Alexandra Rd, Singapore 119967"
+    />
   </Container>
 );
 
