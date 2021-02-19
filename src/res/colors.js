@@ -1,10 +1,12 @@
 const colors = {
+  changiCity: '#BDBDBD',
+  dungeon: '#F2F2F2',
+  dynamicPod: '#C4C4C4',
+  energyPod: '#000000',
   gymPod: '#FFCC00',
   gymPodLight: '#3E3925',
-  spinPod: '#CC14BE',
   powerPod: '#292929',
-  energyPod: '#000000',
-  dynamicPod: '#C4C4C4',
+  spinPod: '#CC14BE',
   vigorPod: '#7D7244',
 };
 
