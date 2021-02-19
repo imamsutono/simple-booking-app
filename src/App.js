@@ -18,9 +18,13 @@ const App = () => (
       <Stack.Screen
         name="Home"
         component={Home}
-        options={{headerTitle: 'The Gym Pod'}}
+        options={({route}) => ({title: `Welcome ${route.params.username}!`})}
       />
-      <Stack.Screen name="Reservation" component={Reservation} />
+      <Stack.Screen
+        name="Reservation"
+        component={Reservation}
+        options={({route}) => ({title: `Book ${route.params.pod}`})}
+      />
     </Stack.Navigator>
   </NavigationContainer>
 );
