@@ -1,7 +1,8 @@
 import Button from './button';
+import Container from './container';
 import Spacer from './spacer';
 import Text from './text';
 import TextInput from './text_input';
 import Title from './title';
 
-export {Button, Spacer, Text, TextInput, Title};
+export {Button, Container, Spacer, Text, TextInput, Title};
