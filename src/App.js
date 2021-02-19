@@ -4,12 +4,14 @@ import {createStackNavigator} from '@react-navigation/stack';
 import Login from './screens/Login';
 import Home from './screens/Home';
 import Reservation from './screens/Reservation';
+import colors from 'res/colors';
 
 const Stack = createStackNavigator();
 
 const App = () => (
   <NavigationContainer>
-    <Stack.Navigator>
+    <Stack.Navigator screenOptions={{
+        headerStyle: {backgroundColor: colors.gymPod}}}>
       <Stack.Screen
         name="Login"
         component={Login}
