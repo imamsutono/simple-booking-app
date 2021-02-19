@@ -17,7 +17,7 @@ const Card = ({
 }) => (
   <TouchableNativeFeedback onPress={onPress}>
     <View style={styles.container}>
-      <Image source={images.gymPod} style={styles.cover} />
+      <Image source={images[cover]} style={styles.cover} />
       <View style={styles.content}>
         <Text style={styles.title}>{title}</Text>
         <Text style={styles.subtitle}>{subtitle}</Text>
