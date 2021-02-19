@@ -1,4 +1,5 @@
 const colors = {
+  cathay: '#2D2D2D',
   changiCity: '#BDBDBD',
   dungeon: '#F2F2F2',
   dynamicPod: '#C4C4C4',
