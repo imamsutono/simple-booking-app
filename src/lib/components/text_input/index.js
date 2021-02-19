@@ -7,7 +7,7 @@ const TextInput = (props) => {
   return (
     <Input
       placeholderTextColor={colors.vigorPod}
-      style={styles.container}
+      style={styles.textInput}
       {...props}
     />
   );

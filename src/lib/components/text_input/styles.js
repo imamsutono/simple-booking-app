@@ -3,7 +3,7 @@ import colors from 'res/colors';
 import {base, spacing} from 'res/layout';
 
 const styles = StyleSheet.create({
-  container: {
+  textInput: {
     backgroundColor: colors.gymPodLight,
     borderColor: colors.gymPod,
     borderWidth: 1,
