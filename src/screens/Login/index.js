@@ -1,44 +1,32 @@
 import React from 'react';
+import {Image} from 'react-native';
 import {
-  Image,
-  StatusBar,
+  Button,
+  Container,
+  Spacer,
   Text,
   TextInput,
-  View,
-  TouchableNativeFeedback,
-} from 'react-native';
-import colors from 'res/colors';
+  Title,
+} from 'lib/components';
 import images from 'res/images';
 import styles from './styles';
 
 const Login = () => (
-  <View style={styles.container}>
-    <StatusBar backgroundColor={colors.powerPod} />
-
+  <Container>
+    <Spacer size="xl" />
     <Image source={images.gymPodder} style={styles.gymPodder} />
 
-    <Text style={styles.title}>Hi Gym Podder!</Text>
-    <Text style={styles.subtitle}>
+    <Title>Hi Gym Podder!</Title>
+    <Text align="center" color="gymPod">
       Your Private Gym Awaits! #JustGetStarted
     </Text>
-    <View style={styles.divider} />
+    <Spacer size="xl" />
 
-    <TextInput
-      placeholder="Username"
-      placeholderTextColor={colors.vigorPod}
-      style={styles.textInput}
-    />
-    <TextInput
-      placeholder="Password"
-      placeholderTextColor={colors.vigorPod}
-      style={styles.textInput}
-    />
-    <TouchableNativeFeedback>
-      <View style={styles.button}>
-        <Text style={styles.buttonText}>LOGIN</Text>
-      </View>
-    </TouchableNativeFeedback>
-  </View>
+    <TextInput placeholder="Username" />
+    <TextInput placeholder="Password" secureTextEntry />
+    <Spacer />
+    <Button label="LOGIN" />
+  </Container>
 );
 
 export default Login;
