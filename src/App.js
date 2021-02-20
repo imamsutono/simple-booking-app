@@ -10,8 +10,10 @@ const Stack = createStackNavigator();
 
 const App = () => (
   <NavigationContainer>
-    <Stack.Navigator screenOptions={{
-        headerStyle: {backgroundColor: colors.gymPod}}}>
+    <Stack.Navigator
+      screenOptions={{
+        headerStyle: {backgroundColor: colors.gymPod},
+      }}>
       <Stack.Screen
         name="Login"
         component={Login}
